@@ -7,51 +7,53 @@ Per oggi diamo priorità alla struttura: quando è tutto bello solido, passiamo 
 
 <template>
   <div id="app">
-    <div class="container">
-      <SiteHeader />
+    
+    <SiteHeader />
 
-    <main class="site_main"></main>
-    <!-- /.site_main -->
+    <SiteMain />
 
-    <footer class="site_footer"></footer>
-    <!-- /.site_footer -->
-    </div>
+    <SiteFooter />
+
   </div>
+
 </template>
 
 <script>
 import SiteHeader from '@/components/HeaderComponent.vue';
+import SiteMain from '@/components/MainComponent.vue';
+import SiteFooter from '@/components/FooterComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    SiteHeader
+    SiteHeader,
+    SiteMain,
+    SiteFooter,
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  /* commons */
-  *{
+ /* commons */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 
-  img{
+  img {
     max-width: 100%;
   }
 
-  .container{
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  .wrapper{
     width: 1200px;
     margin: 2rem auto;
   }
 }
-
 
 </style>

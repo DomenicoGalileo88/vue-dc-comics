@@ -1,6 +1,7 @@
 <template>
     <header class="site_header">
-      <div class="logo">
+      <div class="container">
+          <div class="logo">
         <img src="@/assets/img/dc-logo.png" alt="">
       </div>
       <!-- /.logo -->
@@ -20,6 +21,8 @@
         </ul>
       </nav>
       <!-- /.navbar -->
+      </div>
+      <!-- /.container -->
     </header>
     <!-- /.site_header -->
 </template>
@@ -33,18 +36,30 @@ export default {
 <style lang="scss" scoped>
 
 header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  nav{
-    ul{
-      display: flex;
-
-      li{
-        list-style: none;
-        padding: 1rem;
-      }
-    }
+    margin: 2rem auto;
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+              nav{
+                ul{
+                  display: flex;
+            
+                  li{
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    list-style: none;
+                    padding: 0.5rem;
+            
+                    &:hover{
+                        color: cornflowerblue;
+                        border-bottom: 1px solid cornflowerblue;
+                    }
+                  }
+                }
+              }
+        
   }
 }
 
