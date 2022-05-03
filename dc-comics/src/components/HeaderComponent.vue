@@ -8,16 +8,7 @@
 
       <nav class="navbar">
         <ul>
-          <li>CHARACTERS</li>
-          <li>COMICS</li>
-          <li>MOVIES</li>
-          <li>TV</li>
-          <li>GAMES</li>
-          <li>COLLECTIBLES</li>
-          <li>VIDEOS</li>
-          <li>FANS</li>
-          <li>NEWS</li>
-          <li>SHOP</li>
+          <li v-for="(link, index) in nav_links" :key="index">{{link.nome}}</li>
         </ul>
       </nav>
       <!-- /.navbar -->
@@ -29,7 +20,43 @@
 
 <script>
 export default {
-    name: 'SiteHeader'
+    name: 'SiteHeader', 
+    data() {
+        return {
+            nav_links: [
+                {
+                    nome: 'CHARACTERS'
+                },
+                {
+                    nome: 'COMMICS'
+                },
+                {
+                    nome: 'MOVIES'
+                },
+                {
+                    nome: 'TV'
+                },
+                {
+                    nome: 'GAMES'
+                },
+                {
+                    nome: 'COLLECTIBLES'
+                },
+                {
+                    nome: 'VIDEOS'
+                },
+                {
+                    nome: 'FANS'
+                },
+                {
+                    nome: 'NEWS'
+                },
+                {
+                    nome: 'SHOP'
+                },
+            ]
+        }
+    }
 }
 </script>
 

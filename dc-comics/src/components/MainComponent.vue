@@ -7,52 +7,24 @@
       </section>
       <!-- /.content -->
 
-      <section class="items">
+      <div class="items">
         <div class="container">
           <div class="row">
-          <div class="col">
+          <div class="col" v-for="({src, title}, index) in main_items" :key="index">
             <div class="digital_comics">
-                <img src="@/assets/img/buy-comics-digital-comics.png" alt="">
-                <h6 class="title_item">DIGITAL COMICS</h6>
+                <img :src="require(`@/assets${src}`)" alt="">
+                <div class="title_item">{{title}}</div>
             </div>
             <!-- /.digital_comics -->
           </div>
 
-          <div class="col">
-            <div class="merchandise">
-              <img src="@/assets/img/buy-comics-merchandise.png" alt="">
-                <h6 class="title_item">DIGITAL COMICS</h6>
-            </div>
-            <!-- /.merchandise -->
-          </div>
-
-          <div class="col">
-            <div class="subscription">
-              <img src="@/assets/img/buy-comics-subscriptions.png" alt="">
-                <h6 class="title_item">DIGITAL COMICS</h6>
-            </div>
-            <!-- /.subscription -->
-          </div>
-
-          <div class="col">
-            <div class="shop">
-              <img src="@/assets/img/buy-comics-shop-locator.png" alt="">
-                <h6 class="title_item">DIGITAL COMICS</h6>
-            </div>
-            <!-- /.shop -->
-          </div>
-
-          <div class="col">
-            <div class="power">
-              <img src="@/assets/img/buy-dc-power-visa.svg" alt="">
-                <h6 class="title_item">DIGITAL COMICS</h6>
-            </div>
-            <!-- /.power -->
-          </div>
+          
         </div>
+        <!-- /.row -->
         </div>
+        <!-- /.container -->
         
-      </section>
+      </div>
       <!-- /.items -->
 
     </main>
@@ -61,7 +33,34 @@
 
 <script>
 export default {
-    name:'SiteMain'
+    name:'SiteMain',
+
+    data() {
+        return {
+            main_items: [
+            {
+                src: "/img/buy-comics-digital-comics.png",
+                title: "DIGITAL COMICS",
+            },
+            {
+                src: '/img/buy-comics-merchandise.png',
+                title: 'DC MERCHANDISE',
+            },
+            {
+                src: "/img/buy-comics-subscriptions.png",
+                title: "SUBSCRIPTION",
+            },
+            {
+                src: "/img/buy-comics-shop-locator.png",
+                title: "COMIC SHOP LOCATOR",
+            },
+            {
+                src: "/img/buy-dc-power-visa.svg",
+                title: "DC POWER VISA",
+            },
+        ]
+        }
+    }
 }
 </script>
 
@@ -90,6 +89,7 @@ export default {
       align-items: center;
       .title_item{
         margin-left: 0.7rem;
+        font-size: 0.9rem;
       }
     }
     }

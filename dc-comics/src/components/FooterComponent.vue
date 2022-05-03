@@ -7,47 +7,28 @@
             <div class="col-2 py-4">
               <ul>
                 <h5 class="title_utyls">DC COMICS</h5>
-                <li>Characters</li>
-                <li>Comics</li>
-                <li>Movies</li>
-                <li>TV</li>
-                <li>Games</li>
-                <li>Videos</li>
-                <li>News</li>
+                <li v-for="(utyl, index) in comics_utyls" :key="index">{{utyl.link}}</li>
               </ul>
 
               <ul>
                 <h5 class="title_utyls">SHOP</h5>
-                <li>Shop DC</li>
-                <li>Shop DC Collectibles</li>
+                 <li v-for="(utyl, index) in shop_utyls" :key="index">{{utyl.link}}</li>
               </ul>
             </div>
             <!-- /.col-1 -->
             <div class="col-2 py-4">
               <ul>
                 <h5 class="title_utyls">DC</h5>
-                <li>Ters Of Use</li>
-                <li>Privacy policy (New)</li>
-                <li>Ad Choices</li>
-                <li>Adversting</li>
-                <li>Jobs</li>
-                <li>Subscription</li>
-                <li>Talent Workshop</li>
-                <li>CPSC Certificates</li>
-                <li>Ratings</li>
-                <li>Shop Help</li>
-                <li>Contact Us</li>
+                 <li v-for="(utyl, index) in dc_utyls" :key="index">{{utyl.link}}</li>
+                
               </ul>
             </div>
             <!-- /.col-1 -->
             <div class="col-2 py-4">
               <ul>
                 <h5 class="title_utyls">SITES</h5>
-                <li>DC</li>
-                <li>MAD Magazine</li>
-                <li>DC Kids</li>
-                <li>DC Universe</li>
-                <li>DC Power Vista</li>
+                 <li v-for="(utyl, index) in sites_utyls" :key="index">{{utyl.link}}</li>
+                
               </ul>
             </div>
             <!-- /.col-1 -->
@@ -68,12 +49,9 @@
           </div>
           <div class="follow_us">
             <h3 class="title_follow_us">FOLLOWS US</h3>
-            <div class="icon_follows">
-              <img src="@/assets/img/footer-facebook.png" alt="">
-              <img src="@/assets/img/footer-twitter.png" alt="">
-              <img src="@/assets/img/footer-youtube.png" alt="">
-              <img src="@/assets/img/footer-pinterest.png" alt="">
-              <img src="@/assets/img/footer-periscope.png" alt="">
+            <div v-for="(icon, index) in icons_footer" :key="index" class="icon_follows">
+              <img :src="require(`@/assets${icon.icon}`)" alt="">
+              
 
             </div>
           </div>
@@ -88,6 +66,111 @@
 <script>
 export default {
     name: 'SiteFooter',
+    data() {
+        return {
+            comics_utyls: [
+                {
+                    link: 'Characters'
+                },
+                {
+                    link: 'Comics'
+                },
+                {
+                    link: 'Movies'
+                },
+                {
+                    link: 'TV'
+                },
+                {
+                    link: 'Games'
+                },
+                {
+                    link: 'Videos'
+                },
+                {
+                    link: 'News'
+                },
+            ],
+            shop_utyls : [
+                {
+                    link: 'Shop DC'
+                },
+                {
+                    link: 'Shop DC Collectibles'
+                }
+            ],
+            dc_utyls: [
+                {
+                    link: 'Ters Of Use'
+                },
+                {
+                    link: 'Privacy policy'
+                },
+                {
+                    link: 'Ad Choices'
+                },
+                {
+                    link: 'Adversting'
+                },
+                {
+                    link: 'Jobs'
+                },
+                {
+                    link: 'Subscription'
+                },
+                {
+                    link: 'Talent Workshop'
+                },
+                {
+                    link: 'CPSC Certificates'
+                },
+                {
+                    link: 'Ratings'
+                },
+                {
+                    link: 'Shop Help'
+                },
+                {
+                    link: 'Contact Us'
+                },
+            ],
+            sites_utyls: [
+                {
+                    link: 'DC'
+                },
+                {
+                    link: 'MAD Magazine'
+                },
+                {
+                    link: 'DC Kids'
+                },
+                {
+                    link: 'DC Universe'
+                },
+                {
+                    link: 'DC Power Vista'
+                },
+                ],
+            icons_footer: [
+                {
+                    icon: "/img/footer-facebook.png"
+                },
+                {
+                    icon: "/img/footer-twitter.png"
+                },
+                {
+                    icon: "/img/footer-youtube.png"
+                },
+                {
+                    icon: "/img/footer-pinterest.png"
+                },
+                {
+                    icon: "/img/footer-periscope.png"
+                },
+                ],
+
+        }
+    }
 }
 </script>
 
