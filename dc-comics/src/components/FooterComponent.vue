@@ -180,5 +180,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@assets/scss/partials/_footer.scss";
+@import "@/assets/scss/partials/_footer.scss";
 </style>
