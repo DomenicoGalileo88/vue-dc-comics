@@ -34,23 +34,5 @@ export default {
 </script>
 
 <style lang="scss">
- /* commons */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  .wrapper{
-    width: 1200px;
-    margin: 2rem auto;
-  }
-}
-
+@import '~@/assets/scss/style.scss';
 </style>

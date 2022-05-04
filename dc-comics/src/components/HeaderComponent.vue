@@ -1,12 +1,13 @@
 <template>
     <header class="site_header">
       <div class="container">
-          <div class="logo">
-        <img src="@/assets/img/dc-logo.png" alt="">
-      </div>
-      <!-- /.logo -->
+        
 
       <nav class="navbar">
+          <div class="logo">
+            <img src="@/assets/img/dc-logo.png" alt="">
+        </div>
+      <!-- /.logo -->
         <ul>
           <li v-for="(link, index) in nav_links" :key="index">{{link.nome}}</li>
         </ul>
@@ -65,10 +66,6 @@ export default {
 header{
     margin: 2rem auto;
         .container{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            
               nav{
                 ul{
                   display: flex;
