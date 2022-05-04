@@ -66,6 +66,8 @@ export default {
 
 <style lang="scss" scoped>
     main{
+        position: relative;
+        z-index: 1;
   .content{
     background-color: black;
     color: white;
@@ -75,7 +77,7 @@ export default {
   }
 
   .items{
-    background-color: blue;
+    background-color: cornflowerblue;
     color: white;
     img{
       height: 60px;

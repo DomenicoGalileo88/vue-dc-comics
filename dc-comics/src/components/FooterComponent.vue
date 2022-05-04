@@ -33,7 +33,7 @@
             </div>
             <!-- /.col-1 -->
 
-            <div class="col logo_big">
+            <div class="col-6 logo_big">
               <img src="@/assets/img/dc-logo-bg.png" alt="">
             </div>
             <!-- /.col-6 -->
@@ -48,7 +48,7 @@
             <button>SIGN-UP NOW!</button>
           </div>
           <div class="follow_us">
-            <h3 class="title_follow_us">FOLLOWS US</h3>
+            <h5 class="title_follow_us">FOLLOWS US</h5>
             <div v-for="(icon, index) in icons_footer" :key="index" class="icon_follows">
               <img :src="require(`@/assets${icon.icon}`)" alt="">
               
@@ -177,6 +177,16 @@ export default {
 <style lang="scss" scoped>
 footer{
   .utyls{
+      max-height: 400px;
+
+    .col-2{
+        width: 160px !important;
+    }
+
+    .col-6{
+        justify-content: flex-end;
+    }
+
     ul{
       padding-left: 0;
     }
@@ -194,36 +204,40 @@ footer{
       display: flex;
       align-items: center;
         img{
-          padding-left: 8rem;
-          height: 110%;
+          position: relative;
+          bottom: 100px;
+          z-index: 0;
         }
       }
   }
 
   .follows{
+    position: relative;  
+    z-index: 1;
     padding: 3rem 0;
-      background-color: rgb(77, 77, 77);
+    background-color: rgb(77, 77, 77);
     .container{
       display: flex;
       justify-content: space-between;
       
       button{
         background-color: transparent;
-        border: 1px solid blue;
+        border: 1px solid cornflowerblue;
         padding: 0.5rem;
         color: white;
         font-size: bold;
       }
   
       .title_follow_us{
-        color: blue;
+        color: cornflowerblue;
       }
 
       .follow_us{
         display: flex;
+        align-items: center;
         .icon_follows{
           img{
-            margin-left: 0.5rem;
+            margin-left: 1rem;
           }
         }
       }
