@@ -4,13 +4,21 @@
         
 
       <nav class="navbar">
-          <div class="logo">
-            <img src="@/assets/img/dc-logo.png" alt="">
-        </div>
-      <!-- /.logo -->
-        <ul>
-          <li v-for="(link, index) in nav_links" :key="index">{{link.nome}}</li>
-        </ul>
+          <div class="row">
+              <div class="col-6 py-4">
+                <div class="logo">
+                    <img src="@/assets/img/dc-logo.png" alt="">
+                </div>
+                 <!-- /.logo -->
+              </div>
+              <div class="col-6">
+                <ul>
+                    <li v-for="(link, index) in nav_links" :key="index">
+                        <a href="#">{{link.nome}}</a>
+                    </li>
+                </ul>
+              </div>
+          </div>
       </nav>
       <!-- /.navbar -->
       </div>
@@ -65,25 +73,35 @@ export default {
 
 header{
         .container{
+            a{
+                display: flex;
+                align-items: center;
+                color: black;
+                text-decoration: none;
+                height: 100%;
+                &:hover{
+                    color: cornflowerblue;
+                }
+            }
               nav{
+                  padding: 0;
                 ul{
-                  display: flex;
-            
+                    height: 100%;
+                    display: flex;
                   li{
                     font-size: 0.9rem;
                     font-weight: 600;
                     list-style: none;
                     padding: 0.5rem;
-            
                     &:hover{
-                        color: cornflowerblue;
-                        border-bottom: 1px solid cornflowerblue;
+                        border-bottom: 5px solid cornflowerblue;
                     }
+                    
                   }
                 }
               }
-        
-  }
+              
+             }
 }
 
 </style>
