@@ -5,14 +5,15 @@
       <section class="content">
         <div class="container">
         <div class="row">
-          <div class="col_2" v-for="(figure, index) in main_figures" :key="index">
-            <div class="figures">
+          
+            <MainFigure :figure='figure' v-for="(figure, index) in main_figures" :key="index" />
+            <!-- <div class="figures">
               <img :src="figure.thumb" :alt="figure.series">
               <h5 class="title_figure mt-2">{{figure.series}}</h5>
-            </div>
+            </div> -->
           </div>
         </div>
-      </div>
+      
       </section>
       <!-- /.content -->
 
@@ -41,8 +42,13 @@
 </template>
 
 <script>
+import MainFigure from '@/components/FiguresComponent.vue';
+
 export default {
     name:'SiteMain',
+    components : {
+      MainFigure
+    },
 
     data() {
         return {
@@ -163,14 +169,6 @@ export default {
   .content{
     background-color: black;
     color: white;
-    .figures{
-      img{
-          aspect-ratio: 1/1;
-          height: 200px;
-          object-fit: cover;
-          
-        }
-      }
     .container{
       padding: 3rem 0;
       
