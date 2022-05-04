@@ -45,12 +45,12 @@
       <section class="follows">
         <div class="container">
           <div class="sign">
-            <button>SIGN-UP NOW!</button>
+            <button class="btn-outline-pimary">SIGN-UP NOW!</button>
           </div>
           <div class="follow_us">
             <h5 class="title_follow_us">FOLLOWS US</h5>
             <div v-for="(icon, index) in icons_footer" :key="index" class="icon_follows">
-              <img :src="require(`@/assets${icon.icon}`)" alt="">
+              <img :src="icon.icon" alt="">
               
 
             </div>
@@ -153,19 +153,19 @@ export default {
                 ],
             icons_footer: [
                 {
-                    icon: "/img/footer-facebook.png"
+                    icon: require('@/assets/img/footer-facebook.png')
                 },
                 {
-                    icon: "/img/footer-twitter.png"
+                    icon: require('@/assets/img/footer-twitter.png')
                 },
                 {
-                    icon: "/img/footer-youtube.png"
+                    icon: require('@/assets/img/footer-youtube.png')
                 },
                 {
-                    icon: "/img/footer-pinterest.png"
+                    icon: require('@/assets/img/footer-pinterest.png')
                 },
                 {
-                    icon: "/img/footer-periscope.png"
+                    icon: require('@/assets/img/footer-periscope.png')
                 },
                 ],
 
@@ -220,13 +220,13 @@ footer{
       display: flex;
       justify-content: space-between;
       
-      button{
+      /* button{
         background-color: transparent;
         border: 1px solid cornflowerblue;
         padding: 0.5rem;
         color: white;
         font-size: bold;
-      }
+      } */
   
       .title_follow_us{
         color: cornflowerblue;

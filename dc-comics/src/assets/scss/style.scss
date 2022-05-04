@@ -16,3 +16,11 @@
         margin: 2rem auto;
     }
 }
+
+/* utilities */
+
+.btn-outline-pimary{
+    @include button;
+    border: 1px solid cornflowerblue;
+    color: white;
+}

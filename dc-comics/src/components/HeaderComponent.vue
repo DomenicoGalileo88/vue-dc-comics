@@ -64,7 +64,6 @@ export default {
 <style lang="scss" scoped>
 
 header{
-    margin: 2rem auto;
         .container{
               nav{
                 ul{
