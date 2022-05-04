@@ -80,7 +80,7 @@ header{
                 text-decoration: none;
                 height: 100%;
                 &:hover{
-                    color: cornflowerblue;
+                    color: $dc-primary;
                 }
             }
               nav{
@@ -94,7 +94,7 @@ header{
                     list-style: none;
                     padding: 0.5rem;
                     &:hover{
-                        border-bottom: 5px solid cornflowerblue;
+                        border-bottom: 5px solid $dc-primary;
                     }
                     
                   }

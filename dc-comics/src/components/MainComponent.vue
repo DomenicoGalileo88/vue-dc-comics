@@ -171,8 +171,8 @@ main {
     position: absolute;
     top: -25px;
     left: -20px;
-    background-color: cornflowerblue;
-    color: white;
+    background-color: $dc-primary;
+    color: $dc-text-white;
     padding: 0.5rem 1rem;
     border: none;
     text-transform: uppercase;
@@ -183,8 +183,8 @@ main {
     left: 50%;
     font-size: 1.2rem;
     transform: translate(-50%, -50%);
-    background-color: cornflowerblue;
-    color: white;
+    background-color:$dc-primary;
+    color: $dc-text-white;
     text-transform: uppercase;
     border: none;
     padding: 0.5rem 1rem;
@@ -201,16 +201,16 @@ main {
   position: relative;
   z-index: 1;
   .content {
-    background-color: black;
-    color: white;
+    background-color: $dc-banner-bg;
+    color: $dc-text-white;
     .container {
       padding: 3rem 0;
     }
   }
 
   .items {
-    background-color: cornflowerblue;
-    color: white;
+    background-color: $dc-primary;
+    color: $dc-text-white;
     img {
       height: 60px;
     }

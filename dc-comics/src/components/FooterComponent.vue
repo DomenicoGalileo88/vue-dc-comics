@@ -197,11 +197,11 @@ footer {
     }
     background-image: url("@/assets/img/footer-bg.jpg");
     li {
-      color: grey;
+      color: $dc-text-dark;
       list-style: none;
     }
     .title_utyls {
-      color: white;
+      color: $dc-text-white;
       margin-bottom: 1rem;
     }
 
@@ -220,13 +220,13 @@ footer {
     position: relative;
     z-index: 1;
     padding: 3rem 0;
-    background-color: rgb(77, 77, 77);
+    background-color: $dc-footer-bg;
     .container {
       display: flex;
       justify-content: space-between;
 
       .title_follow_us {
-        color: cornflowerblue;
+        color: $dc-primary;
       }
 
       .follow_us {

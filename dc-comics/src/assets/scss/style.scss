@@ -23,6 +23,6 @@
 
 .btn-outline-pimary{
     @include button;
-    border: 1px solid cornflowerblue;
-    color: white;
+    border: 1px solid $dc-primary;
+    color: $dc-text-white;
 }
