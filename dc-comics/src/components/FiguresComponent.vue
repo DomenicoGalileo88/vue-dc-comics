@@ -18,6 +18,7 @@ export default {
 
 <style lang="scss" scoped>
   .figures{
+    text-align: center;
       img{
           aspect-ratio: 1/1;
           height: 200px;
